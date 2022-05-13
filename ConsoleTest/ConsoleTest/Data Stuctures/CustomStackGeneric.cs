@@ -47,9 +47,9 @@ namespace ConsoleTest.Data_Stuctures
             }
         }
 
-        public object[] ToArray()
+        public T[] ToArray()
         {
-            object[] newArr = new object[_values.Length];
+            T[] newArr = new T[_values.Length];
             Array.Copy(_values, newArr, _values.Length);
             return newArr;
         }

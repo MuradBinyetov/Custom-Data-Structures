@@ -39,6 +39,50 @@ namespace ConsoleTest.Data_Stuctures
             return _values[top-1];
         }
 
+        public void Clear()
+        {
+            if (top == 0)
+            {
+                throw new QueueEmptyException("Queue is empty");
+            }
+            top = 0;
+        }
+
+        public T[] ToArray()
+        {
+            T[] newArr = new T[_values.Length];
+            Array.Copy(_values, newArr, _values.Length);
+            return newArr;
+        }
+
+        public bool Contains(T data)
+        {
+            if (top >= 1)
+            {
+                for (int i = 0; i < top; i++)
+                {
+                    if (_values[i].Equals(data))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+
+            return false;
+        }
+
+        public void GetEnumerator()
+        {
+            for (int i = 0; i < top; i++)
+            {
+                Console.WriteLine(_values[i]);
+            }
+        }
+
         private T[] ResizeQueue(T[] arr)
         {
             T[] newArr = new T[0];
