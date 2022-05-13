@@ -5,7 +5,7 @@ using System.Text;
 
 namespace ConsoleTest.Data_Stuctures
 {
-    class CustomQueueGeneric<T> where T : class
+    class CustomQueueGeneric<T> 
     {
         private T[] _values;
         private int top;
