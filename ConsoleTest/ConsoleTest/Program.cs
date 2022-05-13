@@ -15,12 +15,12 @@ namespace ConsoleTest
             Stack st = new Stack(); 
             CustomStack stack = new CustomStack(); 
             stack.Push(3); 
-            stack.Pop();
-            stack.Pop();
+            stack.Pop();  
             stack.Push(5);
             stack.Push("Hello World");
             stack.Push("Bye World");
-            stack.Push("Hello2 World");
+            stack.Push("Hello2 World"); 
+            stack.GetEnumerator();
             var a = stack.Pop();
             stack.Push(8);
         }  

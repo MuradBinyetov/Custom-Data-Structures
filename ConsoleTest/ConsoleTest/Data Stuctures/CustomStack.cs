@@ -1,11 +1,13 @@
 ﻿using ConsoleTest.Exceptions;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ConsoleTest
 {
-    class CustomStack
+    class CustomStack  
     {
         private object[] _values; 
         private int top = 0;
@@ -66,6 +68,14 @@ namespace ConsoleTest
             return newArr;
         }
 
+        public void GetEnumerator()
+        {
+            for (int i = top - 1; i >= 0; i--)
+            {
+                Console.WriteLine(_values[i]);
+            }
+        }
+
         private object[] StackResize(object[] values)
         {
             object[] newValues = new object[0];
@@ -80,6 +90,6 @@ namespace ConsoleTest
             
             Array.Copy(values, newValues,values.Length);
             return newValues;
-        }
+        } 
     }
 }
