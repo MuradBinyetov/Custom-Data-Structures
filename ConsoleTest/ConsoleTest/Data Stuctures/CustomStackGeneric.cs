@@ -43,7 +43,7 @@ namespace ConsoleTest.Data_Stuctures
             }
             else
             {
-                return _values[top];
+                return _values[top-1];
             }
         }
 

@@ -15,7 +15,7 @@ namespace ConsoleTest
         {
             CustomStack stack = new CustomStack();
             stack.Push(2);
-            stack.Push(23);
+            var cb = stack.Peek();
             stack.Push(21);
             stack.Push(276);
             stack.Push(3452);

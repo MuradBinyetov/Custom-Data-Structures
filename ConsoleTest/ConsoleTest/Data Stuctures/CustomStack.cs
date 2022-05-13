@@ -45,7 +45,7 @@ namespace ConsoleTest
             }
             else
             {
-                return _values[top];
+                return _values[top-1];
             }
         }
 
