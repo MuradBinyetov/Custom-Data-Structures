@@ -18,6 +18,10 @@ namespace CustomDataStructures.Data_Stuctures
 
         public int Count => _values.Length;
 
+
+        //<summary>
+        //  Add item to list
+        //</summary>
         public void Add(T data)
         {
             if (top >= Count)
@@ -29,6 +33,9 @@ namespace CustomDataStructures.Data_Stuctures
             top++;
         }
 
+        //<summary>
+        //  Clear all element from list
+        //</summary>
         public void Clear()
         {
             if (top == 0)
@@ -41,6 +48,9 @@ namespace CustomDataStructures.Data_Stuctures
             }
         }
 
+        //<summary>
+        //  Convert List to Array
+        //</summary>
         public T[] ToArray()
         {
             T[] resp = new T[_values.Length];
@@ -48,6 +58,10 @@ namespace CustomDataStructures.Data_Stuctures
             return resp;
         }
 
+
+        //<summary>
+        //  Add many element to list
+        //</summary>
         public void AddRange(IEnumerable<T> collection)
         {
             foreach (var item in collection)
@@ -61,6 +75,9 @@ namespace CustomDataStructures.Data_Stuctures
             }
         }
 
+        //<summary>
+        //  Is exist data in list?
+        //</summary> 
         public bool Contains(T data)
         {
             for (int i = 0; i < top; i++)
@@ -77,6 +94,10 @@ namespace CustomDataStructures.Data_Stuctures
             return false;
         }
 
+
+        //<summary>
+        //  Return item index 
+        //</summary> 
         public int IndexOf(T item)
         {
             for (int i = 0; i < top; i++)
@@ -152,7 +173,19 @@ namespace CustomDataStructures.Data_Stuctures
             Array.Copy(tempArr, index+1, _values, index, top - index);
         }
 
+        public void RemoveRange(int index,int count) //[2,3,4,5,6,7,8]
+        {
+            var tempArr = _values;
 
+            _values = new T[_values.Length];
+            Array.Copy(tempArr, _values, index);
+            Array.Copy(tempArr, index + count, _values, index, top - index);
+        }
+
+
+        //<summary>
+        //  Change List size
+        //</summary> 
         private T[] ResizeList(T[] arr)
         {
             T[] newArr = new T[0];
