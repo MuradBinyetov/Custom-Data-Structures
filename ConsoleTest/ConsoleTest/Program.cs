@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTest.Data_Stuctures;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
@@ -13,13 +14,10 @@ namespace ConsoleTest
         static void Main(string[] args)
         {
             Stack st = new Stack(); 
-            CustomStack stack = new CustomStack(); 
+            CustomStackGeneric<int> stack = new CustomStackGeneric<int>(); 
             stack.Push(3); 
             stack.Pop();  
-            stack.Push(5);
-            stack.Push("Hello World");
-            stack.Push("Bye World");
-            stack.Push("Hello2 World"); 
+            stack.Push(5); 
             stack.GetEnumerator();
             var a = stack.Pop();
             stack.Push(8);
