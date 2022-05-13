@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTest.Exceptions;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -63,7 +64,7 @@ namespace ConsoleTest
             // You can also do nothing but I choos for this.
             if (nCurrent.Next == null)
             {
-                throw new Exception("There is no next node!");
+                throw new LinkedListNodeException("There is no next node!");
             }
             else // If everything is OK
             {
@@ -78,7 +79,7 @@ namespace ConsoleTest
             // Look at ToNext();
             if (nCurrent.Previous == null)
             {
-                throw new Exception("There is no previous node!");
+                throw new LinkedListNodeException("There is no previous node!");
             }
             else
             {
