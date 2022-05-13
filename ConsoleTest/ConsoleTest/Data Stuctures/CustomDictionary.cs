@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ConsoleTest.Exceptions;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +29,7 @@ namespace ConsoleTest
             var keyPresent = _values[hash].Any(p => p.Key.Equals(key));
             if (keyPresent)
             {
-                throw new Exception("Duplicate key has been found");
+                throw new DictionaryDuplicateKey("Duplicate key has been found");
             }
 
             var newValue = new KeyValuePair<TKey, UValue>(key, value);
