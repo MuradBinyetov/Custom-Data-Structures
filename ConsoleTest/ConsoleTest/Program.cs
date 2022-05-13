@@ -13,7 +13,14 @@ namespace ConsoleTest
     { 
         static void Main(string[] args)
         {
-            Queue queue = new Queue();   
+            CustomStack stack = new CustomStack();
+            stack.Push(2);
+            stack.Push(23);
+            stack.Push(21);
+            stack.Push(276);
+            stack.Push(3452);
+            var a =stack.Contains(3);
+            var b = stack.Contains(276);
         }  
     }
 }

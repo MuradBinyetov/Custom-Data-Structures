@@ -68,6 +68,26 @@ namespace ConsoleTest.Data_Stuctures
             return newArr;
         }
 
+        public bool Contains(object data)
+        {
+            if (top >= 1)
+            {
+                for (int i = 0; i < top; i++)
+                {
+                    if (_values[i].Equals(data))
+                    {
+                        return true;
+                    }
+                    else
+                    {
+                        continue;
+                    }
+                }
+            }
+            
+            return false;
+        }
+
         public void GetEnumerator()
         {
             for (int i = 0; i < top; i++)
