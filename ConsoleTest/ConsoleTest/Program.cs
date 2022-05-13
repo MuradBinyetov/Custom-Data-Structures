@@ -12,32 +12,17 @@ namespace ConsoleTest
     { 
         static void Main(string[] args)
         {
-            //HashSet<int> hs = new HashSet<int>();
-            //hs.
-
-
-
-            CustomHashSet<int> chs = new CustomHashSet<int>();
-            
-            chs.Add(2);
-            chs.Add(2);
-            chs.Add(17);
-            foreach (var item in chs)
-            {
-                Console.WriteLine(item);
-            }
-
-
-            CustomDictionary<int, int> dict = new CustomDictionary<int, int>();
-            dict.Add(-1, -1);
-            dict.Add(1, -1);
-            dict.Add(22, -1);
-            dict.ContainsKey(9);
-            dict.GetValue(9);
-
-            CustomHashTable customHashTable = new CustomHashTable();
-            customHashTable.Add(23, 78);
-            customHashTable.Add("salam", 2);
+            Stack st = new Stack(); 
+            CustomStack stack = new CustomStack(); 
+            stack.Push(3); 
+            stack.Pop();
+            stack.Pop();
+            stack.Push(5);
+            stack.Push("Hello World");
+            stack.Push("Bye World");
+            stack.Push("Hello2 World");
+            var a = stack.Pop();
+            stack.Push(8);
         }  
     }
 }
