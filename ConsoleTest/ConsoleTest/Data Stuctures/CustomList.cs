@@ -113,29 +113,31 @@ namespace CustomDataStructures.Data_Stuctures
         //<summary>
         //  Add many items to specified index
         //</summary>
-        public T[] InsertRange(int index, IEnumerable<T> collection) //[2,3,4,5] --> [2,3,22,33,44,4,5]
+        public void InsertRange(int index, IEnumerable<T> collection) //[2,3,4,5] --> [2,3,22,33,44,4,5]
         {
             if (top >= Count)
             {
                 _values = ResizeList(_values);
             }
-            T[] newArr = new T[_values.Length];
+            
             int temp = index;
-            Array.Copy(_values, newArr, index);
+            var tempArr = _values;
+
+            _values = new T[_values.Length];
+            Array.Copy(tempArr, _values, index);
 
             foreach (var item in collection)
             {  
-                if(top >= newArr.Length)
+                if(top >= _values.Length)
                 {
-                    newArr = ResizeList(newArr);
+                    _values = ResizeList(_values);
                 }
-                newArr[index] = item;
+                _values[index] = item;
                 
                 index++;
                 top++;
             }
-            Array.Copy(_values, temp, newArr, index, top-index);
-            return newArr;
+            Array.Copy(tempArr, temp, _values, index, top-index); 
         }
 
         //<summary>
