@@ -29,7 +29,7 @@ namespace ConsoleTest
             var keyPresent = _values[hash].Any(p => p.Key.Equals(key));
             if (keyPresent)
             {
-                throw new DictionaryDuplicateKey("Duplicate key has been found");
+                throw new DictionaryDuplicateKeyException("Duplicate key has been found");
             }
 
             var newValue = new KeyValuePair<TKey, UValue>(key, value);

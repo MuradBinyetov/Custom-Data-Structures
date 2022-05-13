@@ -30,7 +30,7 @@ namespace ConsoleTest.Data_Stuctures
         {
             if (top == 0)
             {
-                throw new StackEmpty("Stack is empty"); // My Exception Class
+                throw new StackEmptyException("Stack is empty"); // My Exception Class
             }
             return _values[--top];
         }
@@ -39,7 +39,7 @@ namespace ConsoleTest.Data_Stuctures
         {
             if (top == 0)
             {
-                throw new StackEmpty("Stack is empty"); // My Exception Class
+                throw new StackEmptyException("Stack is empty"); // My Exception Class
             }
             else
             {
@@ -58,7 +58,7 @@ namespace ConsoleTest.Data_Stuctures
         {
             if (top == 0)
             {
-                throw new StackEmpty("Stack is empty"); // My Exception Class
+                throw new StackEmptyException("Stack is empty"); // My Exception Class
             }
             else
             {

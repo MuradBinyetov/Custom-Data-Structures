@@ -4,17 +4,17 @@ using System.Text;
 
 namespace ConsoleTest.Exceptions
 {
-    class DictionaryDuplicateKey : Exception
+    public class StackEmptyException : Exception
     {
         private string message;
         private Exception innerException;
-        public DictionaryDuplicateKey(string message)
-                :base()
-        { 
+        public StackEmptyException(string message) 
+                : base(message)
+        {
         }
 
-        public DictionaryDuplicateKey(string message,Exception innerException)
-                :base(message, innerException)
+        public StackEmptyException(string message, Exception innerException)
+            : base(message, innerException)
         {
             this.message = message;
             this.innerException = innerException;

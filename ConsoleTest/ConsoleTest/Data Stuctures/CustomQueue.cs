@@ -1,47 +1,48 @@
 ﻿using ConsoleTest.Exceptions;
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 
-namespace ConsoleTest
+namespace ConsoleTest.Data_Stuctures
 {
-    class CustomStack  
+    class CustomQueue
     {
-        private object[] _values; 
-        private int top = 0;
-
-        public CustomStack()
+        private object[] _values;
+        private int top;
+        public CustomQueue()
         {
             _values = new object[0];
-            
         }
         public int Count => _values.Length;
-        public void Push(object data)
+
+        public void Enqueue(object data)
         {
             if(top >= Count)
             {
-               _values = StackResize(_values);
+                _values = QueueResize(_values);
             }
+
             _values[top] = data;
             top++;
         }
 
-        public object Pop()
+        public object Dequeue()
         {
-            if (top == 0)
+            if(top == 0)
             {
-                throw new StackEmptyException("Stack is empty"); // My Exception Class
+                throw new QueueEmptyException("Queue is empty");
             }
-            return _values[--top];
+            else
+            {
+                return _values[--top];
+            }
         }
 
         public object Peek()
         {
             if(top == 0)
             {
-                throw new StackEmptyException("Stack is empty"); // My Exception Class
+                throw new QueueEmptyException("Queue is empty");
             }
             else
             {
@@ -53,14 +54,13 @@ namespace ConsoleTest
         {
             if (top == 0)
             {
-                throw new StackEmptyException("Stack is empty"); // My Exception Class
+                throw new QueueEmptyException("Queue is empty");
             }
             else
             {
                 top = 0;
             }
-        }
-
+        } 
         public object[] ToArray()
         {
             object[] newArr = new object[_values.Length];
@@ -70,26 +70,26 @@ namespace ConsoleTest
 
         public void GetEnumerator()
         {
-            for (int i = top - 1; i >= 0; i--)
+            for (int i = 0; i < top; i++)
             {
                 Console.WriteLine(_values[i]);
             }
         }
 
-        private object[] StackResize(object[] values)
+        private object[] QueueResize(object[] arr)
         {
-            object[] newValues = new object[0];
-            if (values.Length == 0)
+            object[] newArr = new object[0];
+            if (arr.Length == 0)
             {
-                newValues = new object[4];
+                newArr = new object[4];
             }
             else
             {
-                newValues = new object[values.Length * 2];
+                newArr = new object[arr.Length * 2];
             }
-            
-            Array.Copy(values, newValues,values.Length);
-            return newValues;
-        } 
+
+            Array.Copy(arr, newArr, arr.Length);
+            return newArr;
+        }
     }
 }
