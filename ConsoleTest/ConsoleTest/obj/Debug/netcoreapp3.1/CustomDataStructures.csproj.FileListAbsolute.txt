@@ -1,0 +1,13 @@
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.exe
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.deps.json
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.runtimeconfig.json
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.runtimeconfig.dev.json
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.dll
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\bin\Debug\netcoreapp3.1\CustomDataStructures.pdb
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.AssemblyInfoInputs.cache
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.AssemblyInfo.cs
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.dll
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.pdb
+C:\Users\Admin\Desktop\Custom-Data-Structures\ConsoleTest\ConsoleTest\obj\Debug\netcoreapp3.1\CustomDataStructures.genruntimeconfig.cache
