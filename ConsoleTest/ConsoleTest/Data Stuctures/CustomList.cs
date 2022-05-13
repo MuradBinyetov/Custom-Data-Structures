@@ -145,7 +145,11 @@ namespace CustomDataStructures.Data_Stuctures
         //</summary>
         public void RemoveAt(int index)
         {
+            var tempArr = _values;
 
+            _values = new T[_values.Length];
+            Array.Copy(tempArr, _values, index); 
+            Array.Copy(tempArr, index+1, _values, index, top - index);
         }
 
 

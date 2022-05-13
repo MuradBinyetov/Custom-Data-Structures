@@ -36,6 +36,9 @@ namespace ConsoleTest
             lt.InsertRange(2, en);
 
             lt.Add(555);
+            lt.RemoveAt(3);
+            lt.RemoveAt(5);
+            lt.RemoveAt(6);
         }  
     }
 }
