@@ -182,6 +182,18 @@ namespace CustomDataStructures.Data_Stuctures
             Array.Copy(tempArr, index + count, _values, index, top - index);
         }
 
+        public void Reverse()
+        {  
+            int index = 0; 
+            for (int i = top-1; i > 0; i--)
+            {
+                if (index == i) break;
+                T temp = _values[index];
+                _values[index] = _values[i];
+                _values[i] = temp;
+                index++; 
+            } 
+        }
 
         //<summary>
         //  Change List size
