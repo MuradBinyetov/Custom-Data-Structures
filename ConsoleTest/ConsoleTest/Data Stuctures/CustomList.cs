@@ -182,6 +182,10 @@ namespace CustomDataStructures.Data_Stuctures
             Array.Copy(tempArr, index + count, _values, index, top - index);
         }
 
+
+        //<summary>
+        //  Reverse the order of list all elements.
+        //</summary> 
         public void Reverse()
         {  
             int index = 0; 
@@ -193,6 +197,22 @@ namespace CustomDataStructures.Data_Stuctures
                 _values[i] = temp;
                 index++; 
             } 
+        }
+
+        //<summary>
+        //  Reverse the order of list specified range.
+        //</summary> 
+        public void Reverse(int index,int count) //[2,3,4,5,6,7,8,9,10] --> (3,4) --->> [2,3,4,8,7,6,5,9,10]
+        {
+            int a = index+count-1;
+            for (int i = index; i < index+count; i++)
+            {
+                if (a == i || i> a) break;
+                T temp = _values[a];
+                _values[a] = _values[i];
+                _values[i] = temp;
+                a--;
+            }
         }
 
         //<summary>
