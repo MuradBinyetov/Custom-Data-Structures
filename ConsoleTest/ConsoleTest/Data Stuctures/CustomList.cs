@@ -58,6 +58,19 @@ namespace CustomDataStructures.Data_Stuctures
             return resp;
         }
 
+        //<summary>
+        //  Convert List to String
+        //</summary>
+        public string ToStr()
+        { 
+            StringBuilder strB = new StringBuilder(); 
+            for (int i = 0; i < top; i++)
+            {
+                strB.Append(_values[i]); 
+            }
+            return strB.ToString();
+        }
+
 
         //<summary>
         //  Add many element to list
@@ -214,6 +227,8 @@ namespace CustomDataStructures.Data_Stuctures
                 a--;
             }
         }
+
+         
 
         //<summary>
         //  Change List size
