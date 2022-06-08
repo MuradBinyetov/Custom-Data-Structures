@@ -15,7 +15,15 @@ namespace ConsoleTest
     { 
         static void Main(string[] args)
         {
-            ValidParantheses.IsValid("{[()]}");
-        }  
+			int[,] array = {
+			{1, 6, 3, 2, 5},
+			{2, 7, 2, 8, 7},
+			{3, 8, 1, 6, 4},
+			{4, 9, 0, 5, 0},
+			{5, 4, 7, 3, 9}
+			};
+			 
+			SumOfDiagonalTwoDimensionalArray.ArrayDiagonal(array);
+		}  
     }
 }
